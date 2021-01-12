@@ -1,0 +1,166 @@
+/* global styles */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+section {
+	display: flex;
+	min-height: 75vh;
+}
+
+/* the bird section part */
+section .bird {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: whitesmoke;
+	background: url("../img/twitter_PNG9.png") fixed, skyblue;
+	background-position: left;
+	font-size: 1.3rem;
+	padding: 5%;
+}
+
+section .bird p {
+	margin: 2.8rem 0;
+}
+
+/* the login and register section part */
+section .content {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+	padding: 5%;
+}
+
+section .content .centered {
+	max-width: 370px;
+}
+
+section .content .logo {
+	color: rgb(45, 149, 246);
+	margin-bottom: 2rem;
+}
+
+section .content .heading {
+	font-size: 1.8rem;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 3.5rem;
+}
+
+section .content .description {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+section .content .register-button,
+section .content .login-button,
+.hidden-login .register-button,
+.hidden-login .login-button {
+	display: block;
+	margin-bottom: 10px;
+	padding: 7px 0;
+	background: rgb(45, 149, 246);
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 500;
+	border-radius: 25px;
+	font-size: 1.1rem;
+	border: 1px solid rgb(45, 149, 246);
+	transition: .3s;
+}
+
+section .content .register-button:hover,
+.hidden-login .register-button:hover,
+.hidden-login .login-button,
+section .content .login-button {
+	background: transparent;
+	color: rgb(45, 149, 246);
+}
+
+section .content .login-button:hover,
+.hidden-login .login-button:hover {
+	background: rgb(45, 149, 246);
+	color: whitesmoke;
+}
+
+/* hidden login */
+.hidden-login {
+	padding: 30px 10px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.hidden-login .register-button,
+.hidden-login .login-button {
+	width: 170px;
+	margin: 0 10px;
+}
+
+/* footer */
+footer {
+	padding: 30px;
+}
+
+footer p {
+	display: inline;
+}
+
+.footer-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.footer-links a, .footer-links p {
+	color: rgba(0, 0, 0, 0.5);
+	margin: 5px 10px;
+	font-size: .9rem;
+}
+
+.footer-links a:hover {
+	text-decoration: underline;
+}
+
+/* responsive tasks */
+@media screen and (max-width: 850px){
+	section {
+		flex-flow: column-reverse;
+	}
+
+	section .bird{
+		width: 100%;
+		height: 30%;
+		font-size: 1.1rem;
+	}
+
+	section .content {
+		width: 100%;
+		height: 70%;
+	}
+
+	section .bird p {
+		margin: 1.8rem 0;
+	}
+	.hidden-login {
+		display: flex;
+	}
+}
